@@ -1,0 +1,10 @@
+<div class="shadow-lg col-md-5 m-auto justify-content-lg-center">
+  <h3 class="mt-5 ml-5 px-3 py-3 display-5 hf">Login</h3>
+  <hr>
+  <input type="text" class="ml-5 mb-5 form-control col-9 ft" placeholder="Enter Username" [(ngModel)]="username">
+  <input type="password" class="ml-5 mb-5 form-control ft col-9" placeholder="Enter password" [(ngModel)]="password">
+  <button class="btn btn-outline-dark ml-5 mb-5 col-9 ft text-uppercase ft" (click)="open()">Login</button>
+  <div class="col-md-9 mx-auto my-auto px-4 py-4 hf">
+    <span>Don't have account ? </span><a [routerLink]="['/reg']">Register</a>
+  </div>
+</div>

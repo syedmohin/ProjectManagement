@@ -1,0 +1,148 @@
+<div>
+    <h2 class="rt">Project Details</h2>
+    <hr class="mb-3">
+    <div>
+        <div class="form-row mb-4">
+            <div class="col">
+                <input type="number" maxlength="2" [(ngModel)]="groupId" class="form-control" placeholder="Group ID" required>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" [(ngModel)]="projectId" placeholder="Project ID" required>
+            </div>
+        </div>
+        <div class="form-row mb-4">
+            <div class="col">
+                <input type="text" class="form-control" [(ngModel)]="projectName" placeholder="Project Name" required>
+            </div>
+        </div>
+        <div class="form-row mb-4">
+            <div class="col-5">
+                <label class="checkbox-inline lg"><input type="checkbox" [(ngModel)]="reviewOne">&nbsp;&nbsp;Review
+                    One</label>
+            </div>
+            <div class="col-5">
+                <label class="checkbox-inline"><input type="checkbox" [(ngModel)]="reviewTwo">&nbsp;&nbsp;Review
+                    Two</label>
+            </div>
+        </div>
+        <h2 class="rt">Student Details</h2>
+        <hr class="mx-3">
+        <h4 class="mx-auto ft" style="width: 200px;">First Student </h4>
+        <div class="form-row mb-4">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Student Name" [(ngModel)]="studentName1">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Student ID" size="10" minlength=10 maxlength=10
+                    [(ngModel)]="studentId1">
+            </div>
+            <div class="col">
+                <select class="form-control" [(ngModel)]="branch1" aria-placeholder="Computer Science & Engineering">
+                    <option value="Computer Science & Engineering">Computer Science & Engineering☺</option>
+                    <option value="Information and Technology">Information and Technology☻</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row mb-4">
+            <div class="col">
+                <label class="sr-only" for="inlineFormInputGroup">E-Mail</label>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@</div>
+                    </div>
+                    <input type="email" class="form-control" [(ngModel)]="email1" id="inlineFormInputGroup"
+                        placeholder="E-Mail">
+                </div>
+            </div>
+            <div class="col">
+                <label class="sr-only" for="inlineFormInputGroup">Phone Number</label>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">+91</div>
+                    </div>
+                    <input [(ngModel)]="phoneNumber1" type="tel" class="form-control" id="inlineFormInputGroup"
+                        pattern="[0-9]{10}" placeholder="Phone Number">
+                </div>
+            </div>
+        </div>
+        <h4 class="mx-auto ft" style="width: 250px;">Second Student </h4>
+        <div class="form-row mb-4">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Student Name" [(ngModel)]="studentName2">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Student ID" [(ngModel)]="studentId2" size="10"
+                    minlength=10 maxlength=10>
+            </div>
+            <div class="col">
+                <select class="form-control" [(ngModel)]="branch2">
+                    <option value="Computer Science & Engineering">Computer Science & Engineering</option>
+                    <option value="Information and Technology">Information and Technology</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row mb-4">
+            <div class="col">
+                <label class="sr-only" for="inlineFormInputGroup">E-Mail</label>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@</div>
+                    </div>
+                    <input type="email" class="form-control" id="inlineFormInputGroup" placeholder="E-Mail"
+                        [(ngModel)]="email2">
+                </div>
+            </div>
+            <div class="col">
+                <label class="sr-only" for="inlineFormInputGroup">Phone Number</label>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">+91</div>
+                    </div>
+                    <input type="tel" class="form-control" id="inlineFormInputGroup" [(ngModel)]="phoneNumber2"
+                        pattern="[0-9]{10}" placeholder="Phone Number">
+                </div>
+            </div>
+        </div>
+        <h4 class="mx-auto ft" style="width: 200px;">Last Student </h4>
+        <div class="form-row mb-4">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Student Name" [(ngModel)]="studentName3">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Student ID" [(ngModel)]="studentId3" size="10"
+                    minlength=10 maxlength=10>
+            </div>
+            <div class="col">
+                <select class="form-control" [(ngModel)]="branch3">
+                    <option value="Computer Science & Engineering">Computer Science & Engineering</option>
+                    <option value="Information and Technology">Information and Technology</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row mb-4">
+            <div class="col">
+                <label class="sr-only" for="inlineFormInputGroup">E-Mail</label>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@</div>
+                    </div>
+                    <input type="email" class="form-control" id="inlineFormInputGroup" [(ngModel)]="email3"
+                        placeholder="E-Mail">
+                </div>
+            </div>
+            <div class="col">
+                <label class="sr-only" for="inlineFormInputGroup">Phone Number</label>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">+91</div>
+                    </div>
+                    <input type="tel" class="form-control" [(ngModel)]="phoneNumber3" id="inlineFormInputGroup"
+                        pattern="[0-9]{10}" placeholder="Phone Number">
+                </div>
+            </div>
+        </div>
+        <div class="mx-auto lg">
+            <input class="btn btn-outline-success form-control mb-4" (click)="submit()" value="Submit" type="button">
+        </div>
+    </div>
+</div>

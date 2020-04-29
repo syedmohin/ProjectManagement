@@ -1,0 +1,68 @@
+<div class="mt-5">
+    <div class="jumbotron pa">
+        <h1 class="text text-primary har">{{name}} the Great</h1>
+        <h3>Lockdown Effect</h3>
+        <p class="lead">This Project have develop for Testing only.</p>
+        <hr cl ass="my-4">
+        <a class="hvr-grow btn btn-primary btn-lg" href="http://portfolioahmed.herokuapp.com/" role="button"
+            style="margin-bottom:25px;">About Me</a><br>
+        <button onClick="alert('still in developing mode');" class="btn btn-primary btn-lg">Download PDF</button>
+    </div>
+    <div>
+        <div class="table-responsive table-borderless">
+            <table class="table table-hover">
+                <th>Group ID</th>
+                <th>Project ID</th>
+                <th>Project Name</th>
+                <th>Review One</th>
+                <th>Review Two</th>
+                <th>Operation</th>
+                <th>Students</th>
+                <tr *ngFor="let arrayObject of details">
+                    <ng-container>
+                        <td scope="row"><b>{{arrayObject.groupId}}</b></td>
+                        <td>{{arrayObject.projectId}}</td>
+                        <td>{{arrayObject.projectName}}</td>
+                        <td *ngIf="arrayObject.reviewOne; else elseBlock">Completed</td>
+                        <td *ngIf="arrayObject.reviewTwo; else elseBlock">Completed</td>
+                        <td class="col-2">
+                            <a class="btn btn-primary hvr-icon-spin" style="color: white;" (click)="edit(arrayObject)">
+                                <i class="hvr-icon fa fa-edit"></i>
+                            </a>&nbsp;
+                            <a (click)="del(arrayObject.groupId)" style="color: white;"
+                                class="btn btn-danger hvr-icon-up"><i class="hvr-icon fa fa-trash"
+                                    aria-hidden="true"></i>
+                            </a>
+                        </td>
+                        <td *ngFor="let s of arrayObject.student">
+                            <a class="hvr-grow-rotate btn btn-outline-primary" data-toggle="modal"
+                                (click)="open(content,s)" data-target="#exampleModal">{{s.studentId}}</a>
+                        </td>
+                        <ng-template #elseBlock>
+                            <td>Not Yet</td>
+                        </ng-template>
+                    </ng-container>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<ng-template #content let-modal>
+    <div class="modal-header rt">
+        <h4 class="modal-title">Student Details</h4>
+        <button type="button" class="close btn btn-outline-dark"  aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body rt">
+        <pre class="rt">ID             {{sId}}</pre>
+        <pre class="rt">Name           {{sName}}</pre>
+        <pre class="rt">Branch         {{br}}</pre>
+        <pre class="rt">Email          {{mail}}</pre>
+        <pre class="rt">Phone Number   {{pNumber}}</pre>
+    </div>
+    <div class="modal-footer rt">
+        <h6 class="text text-primary mr-auto">Goku Amry</h6>
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Close click')">Close</button>
+    </div>
+</ng-template>

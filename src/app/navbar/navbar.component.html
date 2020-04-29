@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light rt">
+    <!-- <img alt="logo" src="../../assets/icon.png" width="100" height="30">&nbsp; -->
+    <a class="navbar-brand" routerLink="/home">Project Management</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="hvr-grow nav-item active"><a role="button" [routerLink]="['/home']" class="nav-link">Home</a>
+            </li>&nbsp;
+            <li class="nav-item active"><a role="button" [routerLink]="['add']" *ngIf="acti.canActivate()"
+                    class="nav-link">Add
+                    Details</a></li>
+            &nbsp;
+            <li class="hvr-grow nav-item active"><a role="button" [routerLink]="['logout']" class="nav-link">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>

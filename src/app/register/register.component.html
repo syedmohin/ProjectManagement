@@ -1,0 +1,11 @@
+<div class="shadow-lg col-md-5 m-auto justify-content-lg-center">
+  <h3 class="mt-5 ml-5 mr-5 px-3 pt-3 hf">Registration</h3>
+  <hr>
+  <input type="text" class="ml-5 mb-5 form-control col-9 ft" placeholder="Enter Username" [(ngModel)]="username">
+  <input type="text" class="ml-5 mb-5 form-control col-9 ft" placeholder="Enter Full Name" [(ngModel)]="fullName">
+  <input type="password" class="ml-5 mb-5 form-control col-9 ft" placeholder="Enter password" [(ngModel)]="password">
+  <button class="btn btn-outline-dark ml-5 mb-5 col-9 text-uppercase ft" (click)="reg()">Register</button>
+  <div class="col-md-9 mx-auto my-auto px-4 hf py-4">
+    <span>Already have account? </span><a [routerLink]="['']">Login</a>
+  </div>
+</div>
